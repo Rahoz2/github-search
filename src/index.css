@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #f8fafc;
+  background: #07090f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+@layer components {
+  .page-shell {
+    @apply mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8;
+  }
+
+  .surface {
+    @apply border border-line bg-white shadow-soft;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300;
+  }
+
+  .btn-primary {
+    @apply focus-ring inline-flex min-h-11 items-center justify-center rounded-md bg-emerald-300 px-4 py-2 text-sm font-bold text-ink transition hover:bg-emerald-200 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-secondary {
+    @apply focus-ring inline-flex min-h-11 items-center justify-center rounded-md border border-white/15 bg-white/[0.08] px-4 py-2 text-sm font-semibold text-white transition hover:border-emerald-300/40 hover:bg-white/[0.12] disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .input-field {
+    @apply focus-ring min-h-11 w-full rounded-md border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-zinc-400;
+  }
+}
